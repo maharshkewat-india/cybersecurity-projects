@@ -1,0 +1,6 @@
+This is a sample secret message for testing LSB steganography.
+
+You can encode this text into the placeholder.png file using the Encode tab,
+then decode it back using the Decode tab to verify everything works.
+
+Feel free to replace this with your own secret message!
