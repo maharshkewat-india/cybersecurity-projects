@@ -1,0 +1,16 @@
+# Digital Forensics Evidence Management System
+# Web application dependencies. See backend/requirements.txt for FastAPI backend deps
+# and frontend/package.json for the Next.js frontend deps.
+
+# This file documents the original Python dependencies for the legacy Tkinter app.
+# For the new web app, see:
+#   - backend/requirements.txt (Python/FastAPI dependencies)
+#   - frontend/package.json  (Node/Next.js dependencies)
+#
+# Legacy standard-library only dependencies (Tkinter app):
+# - tkinter (UI)
+# - sqlite3 (DB)
+# - hashlib (cryptographic hashing)
+# - pathlib (file paths)
+# - secrets (session tokens)
+# - datetime (timestamps)
