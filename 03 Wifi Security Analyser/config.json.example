@@ -1,0 +1,6 @@
+{
+  "scan_interval": 10,
+  "demo_mode": true,
+  "auto_scan": false,
+  "log_level": "INFO"
+}
