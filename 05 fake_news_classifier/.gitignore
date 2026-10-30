@@ -1,0 +1,9 @@
+.venv/
+.venv*/
+__pycache__/
+*.pyc
+.streamlit/
+runtime_logs/
+.pytest_cache/
+models/*.joblib
+models/*.metrics.json

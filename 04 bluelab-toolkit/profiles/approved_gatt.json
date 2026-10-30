@@ -1,0 +1,12 @@
+{
+  "_README": "Add only UUIDs and payload rules confirmed by official documentation for a device you own or are authorized to test. Example entries below are intentionally absent: no arbitrary UUID is approved by default.",
+  "_example_format": {
+    "0000xxxx-0000-1000-8000-00805f9b34fb": {
+      "documented": true,
+      "name": "Documented setting name",
+      "purpose": "Exact documented purpose and expected effect",
+      "max_payload_bytes": 2,
+      "source": "Vendor documentation URL or manual section"
+    }
+  }
+}
