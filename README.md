@@ -57,4 +57,8 @@ README.md                                 Repository project index
 
 These projects are intended for learning and authorized use. The Wi-Fi analyzer reads network metadata and does not capture traffic or attempt access to networks. The forensics system manages records and hashes but does not acquire or certify digital evidence. The steganography app demonstrates data hiding and does not provide cryptographic protection.
 
-See each project directory for its detailed documentation, dependencies, limitations, and project-specific license information.
+See each project directory for its detailed documentation, dependencies, limitations, and any project-specific notices.
+
+## License
+
+This repository is licensed under the [Apache License 2.0](LICENSE). Copyright 2026 MAHARSH KEWAT.
