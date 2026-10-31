@@ -50,7 +50,7 @@ with st.sidebar:
     st.markdown("- On-demand model analysis")
 
 # Main Interface Header
-st.title("🛡️ AI Security & Threat Auditor")
+st.title("🛡️ AI Security Agent & Threat Auditor")
 st.markdown("##### AI-assisted defensive guidance")
 st.markdown("---")
 
