@@ -1,6 +1,6 @@
 # Cybersecurity Projects
 
-A portfolio of five practical security, privacy, forensics, and machine-learning projects. Each project is self-contained and includes its own source code, dependencies, and detailed documentation.
+A portfolio of six practical security, privacy, forensics, and machine-learning projects. Each project is self-contained and includes its own source code, dependencies, and detailed documentation.
 
 ## Project directory
 
@@ -11,6 +11,7 @@ A portfolio of five practical security, privacy, forensics, and machine-learning
 | 03 | [Wi-Fi Security Analyzer](03%20Wifi%20Security%20Analyser/README.md) | Performs authorized, passive Wi-Fi discovery and analyzes reported wireless-network metadata. | Python, PyQt6, Matplotlib, Windows `netsh` |
 | 04 | [BlueLab Toolkit](04%20bluelab-toolkit/README.md) | Scans BLE devices, explores GATT services, and supports carefully allow-listed characteristic writes. | Python, PySide6, Bleak |
 | 05 | [Fake News Classifier](05%20fake_news_classifier/README.md) | Trains a text-pattern classifier and provides an interactive prediction interface. | Python, Streamlit, scikit-learn, pandas |
+| 06 | [AI Security & Threat Auditor](06%20Ai%20security/README.md) | Provides AI-assisted defensive review of user-supplied URLs, IP addresses, and log excerpts without scanning the supplied target. | Python, Streamlit, Groq, python-dotenv |
 
 ## Getting started
 
@@ -141,6 +142,30 @@ streamlit run app.py
 
 **Important:** This is a dataset-trained text-pattern classifier, not a fact-checking service. Its predictions cannot establish that a claim is true, validate sources, or guarantee performance on unfamiliar topics. Replace the synthetic sample with a sufficiently large, licensed, correctly labeled dataset before drawing meaningful evaluation conclusions. See the [full project guide](05%20fake_news_classifier/README.md) for the dataset format and training workflow.
 
+## 06 - AI Security & Threat Auditor
+
+A Streamlit application that sends user-supplied suspicious URLs, IP addresses, or server-log excerpts to a Groq language model for defensive threat assessment, risk-level guidance, and remediation suggestions. It is an AI-assisted analysis interface, not an active network scanner.
+
+**Key features**
+
+- Free-form input for suspicious URLs, IP addresses, and log excerpts, plus quick sample inputs.
+- Groq-powered structured response requesting a threat assessment, risk level, and defensive remediation steps.
+- Local API-key configuration through `GROQ_API_KEY` in the process environment or an ignored `.env` file.
+- Clear user-facing handling for missing credentials, invalid API keys, unavailable models, and other provider errors.
+- A detailed [maintainer system guide](06%20Ai%20security/BRAIN.md) covering architecture, data flow, operational limits, security risks, and testing needs.
+
+**Run it on Windows**
+
+```powershell
+cd "06 Ai security"
+$env:GROQ_API_KEY = "your-groq-api-key"
+.\setup.bat
+```
+
+Alternatively, create an ignored `.env` file containing `GROQ_API_KEY=your-groq-api-key`, then run `setup.bat`. The script creates a local virtual environment, installs dependencies, and starts Streamlit.
+
+**Important:** Use only non-sensitive data unless your organization's data-sharing approval permits sending it to the configured AI provider. The app does not contact, scan, or verify supplied targets, and its output is advisory—not confirmed security evidence. See the [full project guide](06%20Ai%20security/README.md) before use.
+
 ## Repository layout
 
 ```text
@@ -149,6 +174,7 @@ streamlit run app.py
 03 Wifi Security Analyser/                        Passive Wi-Fi metadata analyzer
 04 bluelab-toolkit/                               BLE scanner and GATT explorer
 05 fake_news_classifier/                          Text-classification training and Streamlit app
+06 Ai security/                                   AI-assisted defensive threat-auditor Streamlit app
 LICENSE                                           Apache License 2.0
 README.md                                         This repository guide
 ```
@@ -158,6 +184,7 @@ README.md                                         This repository guide
 - Run scans, Bluetooth operations, and device interactions only where you have clear permission.
 - Treat the Wi-Fi analyzer's score as a metadata-based signal, not a security guarantee.
 - Treat the Fake News Classifier as a screening tool, not a truth-verification system.
+- Use the AI Security & Threat Auditor only for defensive guidance. Do not submit confidential data without approval, and do not mistake its model output for an active scan or verified finding.
 - Do not use the forensics application as a replacement for validated acquisition tools, legal procedures, or professional forensic certification.
 - Keep the steganography app's limitations in mind: hidden data is not cryptographically protected.
 
